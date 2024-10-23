@@ -30,10 +30,10 @@ function sendOnboardingEmails(e) {
   // Choose task sheet and supervisor based on lab assignment
   if (assignedLab === 'Animal lab') {
     taskSheet = animalLabSheet;
-    supervisorEmail = 'darcyg@andrew.cmu.edu';  // Replace with actual email
+    supervisorEmail = 'sample@email.com';  // Replace with actual email
   } else if (assignedLab === 'Human lab') {
     taskSheet = humanLabSheet;
-    supervisorEmail = 'jenns@andrew.cmu.edu';  // Replace with actual email
+    supervisorEmail = 'sample@gmail.com';  // Replace with actual email
   } else {
     Logger.log('Invalid lab assignment');
     return;
@@ -43,7 +43,7 @@ function sendOnboardingEmails(e) {
   var taskCategoriesForPersonnel = assignedLab == 'Animal Lab' ? {
     'Citi Requirements': [],
     'BioRaft Requirements': [],
-    'Animal Handling': ["Receive training from MICV staff on animal handling (coordinate with Darcy and Lab Manager)"],
+    'Animal Handling': ["Receive training from MICV staff on animal handling (coordinate with supervisor and Lab Manager)"],
     'Card Access': [],
     'Work Alone': [],
     'Shared Drive Access': [],
