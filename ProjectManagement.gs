@@ -57,3 +57,45 @@ function submitProject() {
     body: emailBody
   });
 }
+
+// entry form in html
+<!DOCTYPE html>
+<html>
+<head>
+  <base target="_top">
+</head>
+<body>
+  <h1>Project Entry Form</h1>
+  <form id="projectForm">
+    <label for="cellB3">Project Name:</label><br>
+    <input type="text" id="cellB3" name="projectName" required><br><br>
+    <label for="cellD3">Team Members:</label><br>
+    <input type="text" id="cellD3" name="teamMembers" required><br><br>
+    <label for="cellB6">Description:</label><br>
+    <textarea id="cellB6" name="description" required></textarea><br><br>
+    <label for="cellD6">Relevant Trainings:</label><br>
+    <input type="text" id="cellD6" name="trainings"><br><br>
+    <label for="cellB9">Protocol Number:</label><br>
+    <input type="text" id="cellB9" name="protocolNumber" required><br><br>
+    <label for="cellD9">Date:</label><br>
+    <input type="date" id="cellD9" name="date" required><br><br>
+    <input type="button" value="Submit" onclick="submitProject()">
+  </form>
+  <script>
+    function submitProject() {
+      var projectData = {
+        projectName: document.getElementById('cellB3').value,
+        teamMembers: document.getElementById('cellD3').value,
+        description: document.getElementById('cellB6').value,
+        trainings: document.getElementById('cellD6').value,
+        protocolNumber: document.getElementById('cellB9').value,
+        date: document.getElementById('cellD9').value
+      };
+    }
+  </script>
+</body>
+</html>
+
+
+
+
